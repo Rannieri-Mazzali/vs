@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Arimo:ital,wght@0,400..700;1,400..700&family=BBH+Sans+Bartle&family=Bitcount+Grid+Single:wght@100..900&family=Caprasimo&family=Caveat:wght@400..700&family=Concert+One&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Creepster&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Goudy+Bookletter+1911&family=Gruppo&family=Indie+Flower&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Display:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+TAS:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Sedan+SC&family=Stalinist+One&family=Unbounded:wght@200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moedas</title>
+</head>
+
+<body>
+
+    <img id="imgfd" src="./giphy (1).gif" alt="">
+    <img class="anima" src="./rrr.png" alt="">
+    <h1>Conversor de Moedas</h1>
+    <h2>Calculadora de tranferencias</h2>
+    <main>
+        <form id="label-one">
+            <label for="input001" ><b>Valor</b>  </label>
+            <input type="number" name="input001" id="input001" placeholder="ex:R$100.000,00"   >
+
+            <label for="from-currency"> <b>De</b>:</label>
+            <select id="from-currency" name="from-currency" required>
+                <option value="USD">US$ Dólar Americano </option>
+                <option value="EUR">€ Euro</option>
+                <option value="BRL">R$ Real Brasileiro </option>
+                <option value="GBP">£ Libra Esterlina </option>
+            </select>
+
+            <label for="to-currency"><b>Para</b>:</label>
+            <select id="to-currency" name="to-currency" required>
+                <option value="EUR">€ Euro</option>
+                <option value="USD"> US$ Dólar Americano </option>
+                <option value="BRL">R$ Real Brasileiro </option>
+                <option value="GBP">£ Libra Esterlina </option>
+            </select>
+
+
+            <button class="convert-button" type="submit">Converter</button>
+        </form>
+
+        <section>
+            <div class="resultado">
+                <img src="./flag/Brazil.png" alt="moeda-a-converter">
+                <br>
+                <p class="one-convert" >BRL</p>
+                <p class="one-value-convert" >R$ 0,00</p>
+                <br>
+
+            </div>
+
+            <img class="imgarrow" src="./setas.png" alt="">
+            <br>
+
+            <div id="resultados">
+                <img src="./flag/american-flag-icon-2.png" alt="moeda-convertida">
+                <br>
+                <p class="two-converted" >USD</p>
+                <p class="two-value-converted" >US$ 0,00</p>
+
+            </div>
+
+
+
+        </section>
+    </main>
+   <script src="./script.js"></script>
+
+
+
+
+
+</body>
+
+</html>
