@@ -1,6 +1,4 @@
-//-----------------------------------
-// CAMINHOS DAS BANDEIRAS
-//-----------------------------------
+
 const flagPaths = {
     USD: "./flag/american-flag-icon-2.png",
     EUR: "./flag/EUR.png",
@@ -8,9 +6,7 @@ const flagPaths = {
     GBP: "./flag/Libra.png",
 };
 
-//-----------------------------------
-// ATUALIZA BANDEIRAS E CÓDIGOS DE MOEDA
-//-----------------------------------
+
 function updateFlags() {
 
     const from = document.querySelector("#from-currency").value;
@@ -25,9 +21,7 @@ function updateFlags() {
     document.querySelector(".one-convert").innerHTML = to;
 }
 
-//-----------------------------------
-// CONVERTER (COM API REAL)
-//-----------------------------------
+
 async function convertValue(event) {
 
     event.preventDefault();
@@ -38,7 +32,7 @@ async function convertValue(event) {
 
     const leftValue  = document.querySelector(".two-value-converted");
     const rightValue = document.querySelector(".one-value-convert");   
-    updateFlags(); // garante atualização visual
+    updateFlags(); 
 
     if (!amount) {
         leftValue.innerHTML  = "0,00";
@@ -54,13 +48,13 @@ async function convertValue(event) {
         const rate = data.rates[to];
         const result = amount * rate;
 
-        // ESQUERDA (valor original)
+       
         leftValue.innerHTML = amount.toLocaleString("pt-BR", {
             style: "currency",
             currency: from
         });
 
-        // DIREITA (valor convertido)
+      
         rightValue.innerHTML = result.toLocaleString("pt-BR", {
             style: "currency",
             currency: to
@@ -71,12 +65,10 @@ async function convertValue(event) {
     }
 }
 
-//-----------------------------------
-// EVENTOS
-//-----------------------------------
+
 document.querySelector(".convert-button").addEventListener("click", convertValue);
 document.querySelector("#from-currency").addEventListener("change", updateFlags);
 document.querySelector("#to-currency").addEventListener("change", updateFlags);
 
-// Atualiza ao carregar
+
 updateFlags();
