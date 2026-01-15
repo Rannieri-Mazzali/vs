@@ -15,61 +15,77 @@
 
 <body>
 
-     
+ 
     <img class="anima" src="./rrr.png" alt="">
     <h1>Conversor de Moedas</h1>
     <h2>Calculadora de transferencias</h2>
     <main>
         <form id="label-one">
-            <label for="input001" ><b>Valor</b>  </label>
-            <input type="number" name="input001" id="input001" placeholder="ex:R$100.000,00"   >
+            <label for="input-currency"><b>Valor</b> </label>
+
+           
+
+                <input type="number" name="input-currency" class="input-currency" placeholder="ex: R$ 1.000,00">
+
+                
+
+
+             
 
             <label for="from-currency"> <b>De</b>:</label>
-            <select id="from-currency" name="from-currency" required>
+            <select class="from-currency" name="from-currency" required>
+                <option value="BRL">R$ Real Brasileiro </option>
                 <option value="USD">US$ Dólar Americano </option>
                 <option value="EUR">€ Euro</option>
-                <option value="BRL">R$ Real Brasileiro </option>
                 <option value="GBP">£ Libra Esterlina </option>
             </select>
 
             <label for="to-currency"><b>Para</b>:</label>
-            <select id="to-currency" name="to-currency" required>
-                <option value="EUR">€ Euro</option>
+            <select class="to-currency" name="to-currency" required>
                 <option value="USD"> US$ Dólar Americano </option>
+                <option value="EUR">€ Euro</option>
                 <option value="BRL">R$ Real Brasileiro </option>
                 <option value="GBP">£ Libra Esterlina </option>
             </select>
 
 
-            <button class="convert-button" type="submit">Converter</button>
+            <button class="convert-button" type="button">Converter</button>
         </form>
 
         <section>
-            <div class="resultado">
-                <img src="./flag/Brazil.png" alt="moeda-a-converter">
+
+            <div id="resultados">
+                <img src="./american-flag-icon-2.png" alt="moeda-convertida">
                 <br>
-                <p class="one-convert" >BRL</p>
-                <p class="one-value-convert" >R$ 0,00</p>
-                <br>
+                <p class="currency-value-converted">USD</p>
+
 
             </div>
+
+
+
 
             <img class="imgarrow" src="./setas.png" alt="">
             <br>
 
-            <div id="resultados">
-                <img src="./flag/american-flag-icon-2.png" alt="moeda-convertida">
+            <div class="resultado">
+                <img src="./Brazil.png" alt="moeda-a-converter">
                 <br>
-                <p class="two-converted" >USD</p>
-                <p class="two-value-converted" >US$ 0,00</p>
+                <p class="currency-value-convert">BRL</p>
+
+                <br>
 
             </div>
+
+
+
+
 
 
 
         </section>
     </main>
-   <script src="./script.js"></script>
+    <script src="./script.js"></script>
 
 
 
